@@ -14,7 +14,7 @@ html {
 
 h1,
 h2 {
-  font-family: var(--heading);
+  font-family: 'Google Sans';
   font-weight: 500;
   color: var(--text-h);
   color: #fffffe;
@@ -43,6 +43,15 @@ main {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+button {
+    padding: 20px 30px;
+    border: none;
+    font-size: 16px;
+    background-color: #7f5af0;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 #app {

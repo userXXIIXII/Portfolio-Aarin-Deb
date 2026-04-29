@@ -1,6 +1,6 @@
 <template>
     <transition name="modal">
-        <div v-if="isOpen" class="modal">
+        <div v-if="isOpen" class="modal" @click.self="$emit('close')">
 
             <div class="modal-inner">
                 <button @click="$emit('close')">X</button>
@@ -56,16 +56,16 @@
 
     .modal {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        inset: 0;
 
         background: rgba(0, 0, 0, 0.6);
 
         display: flex;
         justify-content: center;
         align-items: center;
+
+        padding: 20px;
+        z-index: 2000;
     }
 
     .modal-inner {
@@ -77,6 +77,9 @@
         padding: 20px;
         border-radius: 10px;
 
+        max-height: 85vh;
+        overflow-y: auto;
+
         width: 300px;
         max-width: 90%;
 
@@ -85,8 +88,10 @@
 
     .modal-image {
         width: 100%;
+        object-fit: cover;
         border-radius: 8px;
         margin: 10px 0;
+        box-shadow: 10px 10px 20px black;
     }
 
     .modal-inner button {
@@ -146,5 +151,11 @@
     .btn.github:hover {
         background: #7f5af0;
         color: white;
+    }
+
+    @media (max-width: 768px) {
+        .modal-image {
+            max-width: 180px;
+        }
     }
 </style>

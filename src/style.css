@@ -3,10 +3,21 @@
   font-weight: 400;
   font-size: 18px;
   font-family: 'Google Sans';
+  text-shadow: 10px 10px 10px black;
+  --header-height: 180px;
+}
+
+html {
+  scroll-padding-top: var(--headerèheight);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 html {
@@ -47,7 +58,7 @@ main {
   width: 100%;
   margin: 0;
   padding: 0;
-  flex: 0;
+  flex: 1;
 }
 
 button {
@@ -74,7 +85,7 @@ button {
   margin: 0;
   min-height: 100vh;
   background-color: #16161a;
-  padding: 230px 50px 50px;
+  padding-top: calc(var(--header-height) + 50px);
   box-sizing: border-box;
 }
 
@@ -96,8 +107,36 @@ button {
 
 #contact {
   margin: 0;
-  height: 75vh;
+  min-height: 75vh;
   background: linear-gradient(#16161a, #242629);
   padding: 30px 50px;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+:root {
+  --headerèheight: 140px;
+}
+
+  #about,
+  #project,
+  #contact {
+    padding: 40px 20px 40px;
+  }
+
+  #home {
+    padding-top: 180px;
+  }
+
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
 }

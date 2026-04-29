@@ -90,9 +90,10 @@ export default {
         align-items: center;
         width: 300px;
         height: 300px;
-        background: #1e1e1e;
+        background: #16161a;
         border-radius: 12px;
         overflow: hidden;
+        box-shadow: 10px 10px 20px black;
 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -101,6 +102,7 @@ export default {
     .card-image {
         height: 150px;
         width: 150px;
+        filter: drop-shadow(10px 10px 10px black);
     }
 
     /* contenu */
@@ -128,7 +130,7 @@ export default {
     /* hover effet */
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        box-shadow: 10px 10px 20px black;
     }
 
     .bio {
@@ -137,4 +139,21 @@ export default {
         margin: 0 auto;
         text-align: center;
     }
+
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 85%;
+        max-width: 400px;
+    }
+
+    .card-image {
+        width: 120px;
+        height: 120px;
+    }
+}
 </style>

@@ -72,7 +72,7 @@
     backdrop-filter: blur(10px);
 
     border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 20px black;
 
     text-align: center;
     }
@@ -147,4 +147,20 @@
     color: #4ade80;
     font-weight: 500;
     }
+
+    @media (max-width: 768px) {
+  .contact {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
 </style>

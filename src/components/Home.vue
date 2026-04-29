@@ -14,5 +14,12 @@
     .pp {
         height: 350px;
         border-radius: 50%;
+        filter: drop-shadow(10px 10px 10px black);
     }
+
+    @media (max-width: 768px) {
+  .pp {
+    height: 200px;
+  }
+}
 </style>

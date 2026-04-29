@@ -28,16 +28,27 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        gap: 50px;
     }
 
     .aboutPic {
-        height: 500px;
+        max-height: 500px;
         border-radius: 5px;
         box-shadow: 10px 10px 20px black;
     }
 
     .bio {
-        width: 750px;
+        max-width: 750px;
     }
     
+    @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 👈 ÇA c’est la clé */
+        text-align: center;
+    }
+
+    .aboutPic {
+        max-width: 350px;
+    }
+}
 </style>

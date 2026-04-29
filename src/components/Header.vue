@@ -17,7 +17,7 @@
 
         <!--burger-->
 
-        <div class="burger" @click="isOpen = !isOpen">
+        <div class="burger" :class="{ open:isOpen }" @click="isOpen = !isOpen">
             <span></span>
             <span></span>
             <span></span>
@@ -55,9 +55,10 @@ nav a {
 .logo {
     height: 130px;
     max-width: 100%;
+    filter: drop-shadow(10px 10px 10px black);
 }
 
-/* ================= BURGER ================= */
+/*  BURGER  */
 
 .burger {
     display: none;
@@ -105,7 +106,7 @@ nav a {
     top: 10px;
 }
 
-/* ================= MOBILE ================= */
+/*  MOBILE */
 
 @media (max-width: 768px) {
 
@@ -143,6 +144,51 @@ nav a {
     }
 
     /* menu ouvert */
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+}
+
+/* TABLETTE */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        height: 120px;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        height: 90px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    /* burger visible */
+    .burger {
+        display: block;
+    }
+
+    nav {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #16161a;
+
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
     nav.open {
         display: flex;
     }

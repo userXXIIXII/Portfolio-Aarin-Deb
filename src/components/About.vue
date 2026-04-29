@@ -43,7 +43,7 @@
     
     @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* 👈 ÇA c’est la clé */
+        flex-direction: column; 
         text-align: center;
     }
 
@@ -51,4 +51,15 @@
         max-width: 350px;
     }
 }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+        .aboutPic {
+            max-width: 600px;
+        }
+    }
 </style>

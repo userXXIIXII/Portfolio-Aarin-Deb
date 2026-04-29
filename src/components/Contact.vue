@@ -64,17 +64,18 @@
 
 <style scoped>
     .contact {
-    max-width: 420px;
-    margin: 80px auto;
-    padding: 30px;
+        width: 100%;
+        max-width: 420px;
+        margin: 80px auto;
+        padding: 30px;
 
-    background: rgba(30, 30, 30, 0.8);
-    backdrop-filter: blur(10px);
+        background: rgba(30, 30, 30, 0.8);
+        backdrop-filter: blur(10px);
 
-    border-radius: 16px;
-    box-shadow: 10px 10px 20px black;
+        border-radius: 16px;
+        box-shadow: 10px 10px 20px black;
 
-    text-align: center;
+        text-align: center;
     }
 
     form {
@@ -85,82 +86,82 @@
 
     /* inputs */
     input, textarea {
-    width: 100%;
-    max-width: 400px;
-    margin: 10px 0;
-    padding: 12px 14px;
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+        padding: 12px 14px;
 
-    border-radius: 8px;
-    border: 1px solid transparent;
+        border-radius: 8px;
+        border: 1px solid transparent;
 
-    background: #2a2a2a;
-    color: white;
+        background: #2a2a2a;
+        color: white;
 
-    outline: none;
-    transition: 0.2s;
-    }
+        outline: none;
+        transition: 0.2s;
+        }
 
-    /* focus */
-    input:focus, textarea:focus {
-    border: 1px solid #7f5af0;
-    box-shadow: 0 0 0 2px rgba(127,90,240,0.3);
+        /* focus */
+        input:focus, textarea:focus {
+        border: 1px solid #7f5af0;
+        box-shadow: 0 0 0 2px rgba(127,90,240,0.3);
     }
 
     /* textarea */
     textarea {
-    min-height: 100px;
-    resize: none;
-    }
+        min-height: 100px;
+        resize: none;
+        }
 
-    /* bouton */
-    button {
-    margin-top: 15px;
-    width: 100%;
+        /* bouton */
+        button {
+        margin-top: 15px;
+        width: 100%;
 
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
 
-    background: linear-gradient(135deg, #7f5af0, #5a3df0);
-    color: white;
-    font-weight: bold;
+        background: linear-gradient(135deg, #7f5af0, #5a3df0);
+        color: white;
+        font-weight: bold;
 
-    cursor: pointer;
-    transition: 0.25s;
+        cursor: pointer;
+        transition: 0.25s;
     }
 
     /* hover bouton */
     button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(127,90,240,0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(127,90,240,0.4);
     }
 
     /* bouton disabled */
     button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+        opacity: 0.6;
+        cursor: not-allowed;
     }
 
     /* message succès */
     .success {
-    margin-top: 15px;
-    color: #4ade80;
-    font-weight: 500;
+        margin-top: 15px;
+        color: #4ade80;
+        font-weight: 500;
     }
 
     @media (max-width: 768px) {
-  .contact {
-    width: 90%;
-    margin: 40px auto;
-    padding: 20px;
-  }
+        .contact {
+            width: 90%;
+            margin: 40px auto;
+            padding: 20px;
+        }
 
-  input, textarea {
-    font-size: 14px;
-  }
+        input, textarea {
+            font-size: 14px;
+        }
 
-  button {
-    padding: 10px;
-  }
-}
+        button {
+            padding: 10px;
+        }
+    }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <p>© 2026 - Mon Portfolio</p>
+        <p>© {{ buildDate }} - Mon Portfolio</p>
         <div class="social">
             <a href="https://www.linkedin.com/in/aarin-deb" target="_blank">
                 <img src="../assets/linkedin.png" alt="LinkedIn Icon" class="icon">
@@ -38,3 +38,13 @@
         filter: drop-shadow(10px 10px 10px #7f5af0);
     }
 </style>
+
+<script>
+    export default {
+        data() {
+            return {
+                buildDate: import.meta.env.VITE_BUILD_DATE
+            }
+        }
+    }
+</script>

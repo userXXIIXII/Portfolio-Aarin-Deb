@@ -2,13 +2,21 @@
     <h1>Mes réalisations</h1>
 
     <div class="projects">
+        <!--Pour chaque éléments dans projects, je l'appelle p
+        key = identifiant unique pour chaque projet-->
         <div v-for="p in projects" :key="p.id" class="card">
             <h3>{{ p.titre }}</h3>
             <img :src="p.preview" class="card-image">
+            <!--Au click selected devient le projet cliqué-->
             <button @click="selected = p">Voir</button>
         </div>
     </div>
 
+    <!--Si selected = true, alors le modal s'affiche
+
+    Modal qui affiche les détails du projet sélectionné
+    
+    Selected = la variable qui contient le projet choisi-->
     <Modal 
         :isOpen="selected"
         :titre="selected?.titre"
@@ -45,6 +53,7 @@ export default {
 
     data() {
         return {
+            //selected = null car aucun projet sélectionné par defaut donc modal fermé
             selected: null,
 
             projects: [

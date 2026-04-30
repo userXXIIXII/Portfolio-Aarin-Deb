@@ -40,23 +40,25 @@
     .bio {
         max-width: 750px;
     }
+
+    /*Media queries*/
     
     @media (max-width: 768px) {
-    .container {
-        flex-direction: column; 
-        text-align: center;
-    }
+        .container {
+            flex-direction: column; 
+            text-align: center;
+        }
 
-    .aboutPic {
-        max-width: 350px;
+        .aboutPic {
+            max-width: 350px;
+        }
     }
-}
 
     @media (min-width: 769px) and (max-width: 1024px) {
         .container {
-        flex-direction: column; 
-        text-align: center;
-    }
+            flex-direction: column; 
+            text-align: center;
+        }
 
         .aboutPic {
             max-width: 600px;

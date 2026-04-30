@@ -1,5 +1,6 @@
 <template>
     <transition name="modal">
+        <!--$emit = envoyer un événement au parent-->
         <div v-if="isOpen" class="modal" @click.self="$emit('close')">
 
             <div class="modal-inner">
@@ -69,7 +70,7 @@
     }
 
     .modal-inner {
-        position: relative; /* IMPORTANT pour le bouton */
+        position: relative; 
 
         background: #1e1e1e;
         color: white;

@@ -2,7 +2,13 @@
     <h1>Contactez moi</h1>
 
     <div class="contact">
+        <!--
+        @submit = "quand le formulaire est envoyé"
+        .prevent = empeche le comportement par défault (rechargement de la page)
+        "sendEmail" = appelle la fonction sendEmail()
+        -->
         <form @submit.prevent="sendEmail">
+            <!--v-model = liaison automatique variable/input-->
             <input v-model="name" type="text" placeholder="Prénom" required>
             <input v-model="surname" type="text" placeholder="Nom" required>
             <input v-model="email" type="email" placeholder="Email" required>
@@ -12,14 +18,17 @@
             <button type="submit">Envoyer</button>
         </form>
 
+        <!--afficher p si success = true-->
         <p v-if="success">Message envoyé !</p>
     </div>
 </template>
 
 <script>
+//import du systeme pour l'envoi du message
     import emailjs from "@emailjs/browser"
 
     export default {
+        //déclaration des variables 
         data() {
             return {
                 name: "",
@@ -31,23 +40,27 @@
             }
         },
 
+        //methods = qui contient mes fonctions
         methods: {
             sendEmail() {
                 emailjs.send(
-                    "service_dawrunm",
-                    "template_pam6but",
+                    "service_dawrunm",  //service email
+                    "template_pam6but", //template
                     {
+                        //liaison des variables avec les données du template
+                        //this. = accès aux données
                         prenom: this.name,
                         nom: this.surname,
                         email: this.email,
                         objet: this.objet,
                         message: this.message
                     },
-                    "RAAykAj5KGGwq2TtX"
+                    "RAAykAj5KGGwq2TtX" //Clé publique
                 )
                 .then(() => {
                     this.success = true
 
+                    //Reset des champs
                     this.name = ""
                     this.surname = ""
                     this.email = ""
@@ -69,7 +82,7 @@
         margin: 80px auto;
         padding: 30px;
 
-        background: rgba(30, 30, 30, 0.8);
+        background-color: #16161a;
         backdrop-filter: blur(10px);
 
         border-radius: 16px;
@@ -94,7 +107,7 @@
         border-radius: 8px;
         border: 1px solid transparent;
 
-        background: #2a2a2a;
+        background-color: #242629;
         color: white;
 
         outline: none;

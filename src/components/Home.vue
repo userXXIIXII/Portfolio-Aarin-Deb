@@ -19,6 +19,8 @@
         filter: drop-shadow(10px 10px 10px black);
     }
 
+    /*Media queries*/
+
     @media (max-width: 768px) {
         .pp {
             height: 200px;
